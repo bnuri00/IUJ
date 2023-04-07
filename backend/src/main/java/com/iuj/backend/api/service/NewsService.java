@@ -71,7 +71,19 @@ public class NewsService {
             // 최근 검색 지역, 없을 경우 전국으로 자동 설정
             SearchRegion region = searchRegionRepository.findById(email).orElse(null);
             Sido sido = Sido.findByName(region != null ? region.getSido() : null);
-            result = newsRepository.getNewsBySchoolAndLocalEqualsLimit(category.getName(), sido.getName(), MAX_NEWS_NUM);
+            List<News> filteredNewsList = newsRepository.getNewsBySchoolAndLocalEqualsLimit(category.getName(), sido.getName(), MAX_NEWS_NUM);
+
+            result.addAll(filteredNewsList);
+
+            int listSize = filteredNewsList.size();
+            if(listSize < 6) {
+                // 부족한 값 채우기
+                int limit = MAX_NEWS_NUM - listSize;
+                List<News> ramdomNewsList = newsRepository.getRandomLimit(limit);
+
+                // 결과 추가
+                result.addAll(ramdomNewsList);
+            }
         } else{
             System.out.println("viewNews 잇음");
             // 가장 최근 본 뉴스 정보
