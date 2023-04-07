@@ -41,7 +41,7 @@
 ![image](/uploads/c971403e37949825d5fd5c56c3131778/image.png)
 
 ### 3) 아키텍처
-![image](/uploads/5defb46e4d438f54d759145f14c17ba3/image.png)
+![architecture](D:\D_library\Desktop\시스템구성도 (아키텍쳐).png)
 
 ## 💙 팀원 소개
 
