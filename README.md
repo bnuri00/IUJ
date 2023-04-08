@@ -71,3 +71,4 @@
 
 ## 💙 팀원 소개
 
+![CRUDeveloper](readme_img/CRUDeveloper.png)
