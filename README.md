@@ -27,7 +27,7 @@
 
 ![지도3](readme_img/지도3.png)
 
-![지도4](/uploads/befee05bae9ce83320005f69f899d4a2/image.png)
+![지도4](readme_img/지도4.png)
 
 ``` bash
 - 선호 필터 : 학군, 교통, 문화, 치안, 편의시설 카테고리 내 세부사항을 선택
